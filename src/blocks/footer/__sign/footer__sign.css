@@ -1,0 +1,14 @@
+.footer__sign{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 1.125em;
+    line-height: 1.2;
+    color: #545454;
+}
+
+@media screen and (max-width:425px) {
+    .footer__sign {
+        font-size: 0.875em;
+    }
+}

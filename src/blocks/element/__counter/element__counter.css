@@ -1,0 +1,10 @@
+.element__counter {
+    grid-area: counter;
+    font-weight: 400;
+    font-size: 0.8em;
+    line-height: 1.2;
+    color: #000;
+    justify-self: center;
+    position: absolute;
+    bottom: 23px;
+}

@@ -1,0 +1,43 @@
+.profile__change-avatar-button {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: none;
+    overflow: hidden;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.profile__change-avatar-button::before{
+    content:'';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url(../../../images/edit_button.svg);
+    background-color: rgba(0, 0, 0, 0.8);
+    background-size: 26px 26px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+}
+
+@media screen and (max-width: 1070px) {
+    .profile__change-avatar-button {
+        align-self: center;
+    }
+}
+
+@media (hover: hover) and (pointer:  fine) {
+    .profile__change-avatar-button:hover::before {
+        opacity: 1;
+        transition: opacity 0.3s linear;
+    }
+}

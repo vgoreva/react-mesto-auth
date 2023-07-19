@@ -1,0 +1,22 @@
+.element__container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 282px 48px 31px;
+    grid-template-columns: 214px 68px;
+    grid-template-areas:
+        "image image"
+        "title like"
+        ". counter";
+    background-color: #fff;
+    border-radius: 10px;
+    align-content: space-between;
+    position: relative;
+}
+
+@media screen and (max-width:630px) {
+    .element__container {
+        width: 282px;
+    }
+}

@@ -1,0 +1,8 @@
+.login__note {
+    margin: 0 auto;
+    padding: 0;
+    max-width: fit-content;
+    font-weight: 9400;
+    font-size: 0.875em;
+    line-height: 1;
+}

@@ -1,0 +1,9 @@
+.popup__container_image{
+    padding: 0;
+    margin: auto;
+    background-color: unset;
+    position: relative;
+    display: flex;
+    width: fit-content;
+    max-width: none;
+}

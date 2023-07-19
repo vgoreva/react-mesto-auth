@@ -63,7 +63,7 @@ function App() {
       .finally(() => setIsSend(false))
   }
 
-  function handleLogin(data) {
+  function handleLogin(data)  {
     setIsSend(true);
     auth.authorization(data)
       .then(res => {
@@ -202,13 +202,14 @@ function App() {
 
   // Рендер начальных карточек и данных польхователя
   useEffect(() => {
+    if(loggedIn){
     Promise.all([api.getUserInfo(), api.getCards()])
       .then(([dataUser, dataCard]) => {
         setCurrentUser(dataUser)
         setCards(dataCard)
       })
       .catch(error => console.log(`Ошибка: ${error}`))
-  }, [])
+  }}, [loggedIn])
 
   // Проверка токена и сохранение email
   useEffect(() => {
@@ -228,7 +229,7 @@ function App() {
   // Рендер всего приложения
   return (
     <CurrentUserContext.Provider value={currentUser}>
-      <div className="App" style={{ backgroundColor: '#000000' }}>
+      <div className="app">
 
         <div className="page__content">
 
